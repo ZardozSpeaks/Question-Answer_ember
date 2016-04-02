@@ -1,8 +1,10 @@
 <div class="page-header">
   {{#link-to 'index'}}<span class="glyphicon glyphicon-home"></span>{{/link-to}}
   <div class="links">
-    <p>{{#link-to 'about'}}About{{/link-to}}</p>
-    <p>{{#link-to 'partners'}}Partners{{/link-to}}</p>
-    <p>{{#link-to 'admin'}}Admin{{/link-to}}</p>
+    {{#if session.isAuthenticated}}
+      <button {{action 'logout'}}>Logout</button>
+    {{else}}
+      {{#link-to 'login'}}Login{{/link-to}}
+    {{/if}}
   </div>
 </div>

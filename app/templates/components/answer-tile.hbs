@@ -1,0 +1,14 @@
+{{#if question.answers}}
+  <hr>
+  <h4>User answers</h4>
+  <div class="answer-field">
+    {{#each question.answers as |answer|}}
+      <p><span>{{answer.author}}</span><br>{{answer.content}}</p>
+      {{#if admin}}
+      <button {{action 'deleteAnswer' answer}}>Delete</button>
+      {{/if}}
+    {{/each}}
+  </div>
+{{/if}}
+
+{{new-answer question=question addAnswer='addAnswer'}}
