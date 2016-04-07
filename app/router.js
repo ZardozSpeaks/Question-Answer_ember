@@ -9,6 +9,7 @@ Router.map(function() {
   this.route('question', {path: 'question/:question_id'});
   this.route('admin');
   this.route('login');
+  this.route('update', {path: 'update/:question_id'});
 });
 
 export default Router;

@@ -1,3 +1,10 @@
 {{#link-to 'question' question.id}}
         <h2>{{question.description}}</h2>
 {{/link-to}}
+
+{{#if admin}}
+    {{#link-to 'update' question.id}}
+      <button type="button">Update</button>
+    {{/link-to}}
+    <button {{action 'deleteQuestion' question}}>Delete</button>
+  {{/if}}

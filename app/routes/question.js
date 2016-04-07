@@ -5,7 +5,8 @@ export default Ember.Route.extend({
     return this.store.findRecord('question', params.question_id);
   },
   actions: {
-    addAnswer(params) {var date = new Date();
+    addAnswer(params) {
+      var date = new Date();
       var month = date.getMonth()+1;
       var day = date.getDate();
       var year = date.getFullYear();
